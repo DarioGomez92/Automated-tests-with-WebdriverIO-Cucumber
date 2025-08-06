@@ -1,18 +1,26 @@
 class homePage {
-    get inputHome() {
+    get home() {
         return $('a[href="/"]')
     }
 
-    get inputLogin() {
+    get login() {
         return $('a[href="/login"]')
     }
 
-    get inputLogout() {
+    get logout() {
         return $('a[href="/logout"]')
     }
 
-    get inputDeleteAccount() {
+    get deleteAccount() {
         return $('a[href="/delete_account"]')
+    }
+
+    get consentir() {
+        return $('.fc-button-label')
+    }
+
+    get products() {
+        return $('a[href="/products"]')
     }
 }
 

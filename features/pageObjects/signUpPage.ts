@@ -91,10 +91,6 @@ class loginLocators {
         return $('b')
     }
 
-    get consentir() {
-        return $('.fc-button-label')
-    }
-
     get emailRegistrered() {
         return $('p')
     }

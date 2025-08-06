@@ -1,3 +1,4 @@
+@signUpTest
 Feature: try diferent type of sign up
 
   Background: Open the website

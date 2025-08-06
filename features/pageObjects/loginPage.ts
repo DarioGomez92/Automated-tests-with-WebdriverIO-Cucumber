@@ -10,6 +10,10 @@ class loginPage {
     get loginButton() {
         return $('[data-qa="login-button"]')
     }
+
+    get incorrectLoginMessage() {
+        return $('p=Your email or password is incorrect!')
+    }
 }
 
 export default new loginPage

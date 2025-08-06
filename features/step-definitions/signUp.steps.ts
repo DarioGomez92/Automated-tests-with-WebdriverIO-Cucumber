@@ -7,8 +7,8 @@ Given('he opens the website', async() => {
 })
 
 Given('he tries to acept cookies and register with good name and email', async() => {
-    await signUpPage.consentir.click()
-    await homePage.inputLogin.click()
+    await homePage.consentir.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue(signUpPage.randomName)
     await signUpPage.inputEmail.click()
@@ -53,8 +53,8 @@ Then('he sees a succesful message', async() => {
 })
 
 Given('he tries to register with a name and email already registered', async() => {
-    await homePage.inputLogout.click()
-    await homePage.inputLogin.click()
+    await homePage.logout.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue('Manolo')
     await signUpPage.inputEmail.click()
@@ -67,7 +67,7 @@ Then('he sees a error message', async() => {
 })
 
 Given('he tries to register with a long name', async() => {
-    await homePage.inputLogin.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue(signUpPage.randomLongName)
     await signUpPage.inputEmail.click()
@@ -81,7 +81,7 @@ Then('he can sign up', async() => {
 })
 
 Given('he tries to register with a incorrect email format', async() => {
-    await homePage.inputLogin.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue(signUpPage.randomName)
     await signUpPage.inputEmail.click()
@@ -90,7 +90,7 @@ Given('he tries to register with a incorrect email format', async() => {
 })
 
 Given('he tries to register with only spaces in the name', async() => {
-    await homePage.inputLogin.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue("                                          ")
     await signUpPage.inputEmail.click()
@@ -99,7 +99,7 @@ Given('he tries to register with only spaces in the name', async() => {
 })
 
 Given('he tries to register with good name and email', async() => {
-    await homePage.inputLogin.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue(signUpPage.randomName)
     await signUpPage.inputEmail.click()
@@ -128,8 +128,8 @@ When('he tries to complete the form with only obligatory datas', async() => {
 })
 
 Given('he logs out and tries to register with good name and email', async() => {
-    await homePage.inputLogout.click()
-    await homePage.inputLogin.click()
+    await homePage.logout.click()
+    await homePage.login.click()
     await signUpPage.inputName.click()
     await signUpPage.inputName.setValue(signUpPage.randomName)
     await signUpPage.inputEmail.click()
@@ -180,11 +180,11 @@ When('he tries to complete the form with only obligatory datas and go to the hom
     await signUpPage.inputPhoneNumber.click()
     await signUpPage.inputPhoneNumber.setValue('685452145')
     await signUpPage.buttonSubmit.click()
-    await homePage.inputHome.click()
+    await homePage.home.click()
 })
 
 When('he tries to delete the account', async() => {
-    await homePage.inputDeleteAccount.click()
+    await homePage.deleteAccount.click()
 })
 
 Then('he sees a succesful delete message', async() => {
