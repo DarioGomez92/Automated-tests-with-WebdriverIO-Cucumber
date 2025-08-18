@@ -2,7 +2,7 @@ import { Given, When, Then } from '@wdio/cucumber-framework';
 import signUpPage from '../pageObjects/signUpPage';
 import homePage from '../pageObjects/homePage';
 
-Given('he opens the website', async() => {
+Given('he opens the website to do sign up test', async() => {
     await browser.url('https://automationexercise.com/')
 })
 
@@ -48,7 +48,7 @@ When('he completes all the details on the form', async() => {
     await signUpPage.buttonSubmit.click()
 })
 
-Then('he sees a succesful message', async() => {
+Then('he sees a success message', async() => {
     await expect(signUpPage.textResult).toHaveText('ACCOUNT CREATED!')
 })
 
@@ -187,7 +187,7 @@ When('he tries to delete the account', async() => {
     await homePage.deleteAccount.click()
 })
 
-Then('he sees a succesful delete message', async() => {
+Then('he sees a success delete message', async() => {
     await expect(signUpPage.confirmationDeleteAccount).toHaveText('ACCOUNT DELETED!')
 })
 
