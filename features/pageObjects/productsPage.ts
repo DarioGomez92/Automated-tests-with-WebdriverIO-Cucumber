@@ -53,6 +53,69 @@ class productsPage {
 
     get product5() {
         return $('a[data-product-id="43"]')
+      
+    get madameBrands() {
+        return $('a[href="/brand_products/Madame"]')
+    }
+
+    get madameDress() {
+        return $('p=Rose Pink Embroidered Maxi Dress')
+    }
+
+    get babyhugBrands() {
+        return $('a[href="/brand_products/Babyhug"]')
+    }
+
+    get babyhugTop() {
+        return $('p=Sleeves Printed Top - White')
+    }
+
+    get bibaBrands() {
+        return $('a[href="/brand_products/Biba')
+    }
+
+    get bibaDress() {
+        return $('p=Rust Red Linen Saree')
+    }
+
+    get viewWomenTop() {
+        return $('a[href="/product_details/8"]')
+    }
+
+    get detailsWomenProduct() {
+        return $('span=Rs. 700')
+    }
+
+    get viewMenJean() {
+        return $('a[href="/product_details/35')
+    }
+
+    get viewButtonCart() {
+        return $('.btn.btn-default.cart')
+    }
+
+    get inputNameMessage() {
+        return $('#review-form #name')
+    }
+
+    get inputEmailMessage() {
+        return $('#review-form #email')
+    }
+
+    get inputTextareaMessage() {
+        return $('#review')
+    }
+
+    get spanSuccessMessage() {
+        return $('span=Thank you for your review.')
+    }
+
+    get viewDetailsProduct() {
+        return $('a[href="/product_details/42"]')
+    }
+
+    get buttonSubmitMessage() {
+        return $('#button-review')
     }
 }
 
